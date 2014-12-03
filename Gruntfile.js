@@ -2,6 +2,21 @@ module.exports = function(grunt) {
    
     grunt.initConfig({   
 		pkg: grunt.file.readJSON('package.json'),
+
+		jshint: {  
+            options: {
+                curly: true,
+                eqeqeq: true,
+                newcap: true,
+                noarg: true,
+                sub: true,
+                undef: true,
+                boss: true
+            },
+            globals: {
+                exports: true
+            }
+		}, 
     
         uglify: {  
 			options: {
@@ -9,19 +24,17 @@ module.exports = function(grunt) {
 			},
             js: {  
                 files: {   
-                    'dist/feloader.min.js': ['src/feloader.js'] 
+                    'dist/jquery.ajaxqueuer.min.js': ['src/jquery.ajaxqueuer.js'] 
                 }  
             } 
         }  
    
     });  
     
-    //grunt.loadNpmTasks('grunt-contrib-jshint');  
-    //grunt.loadNpmTasks('grunt-contrib-concat');  
+    grunt.loadNpmTasks('grunt-contrib-jshint');  
     grunt.loadNpmTasks('grunt-contrib-uglify');  
     
-    // grunt.registerTask('default', ['jshint', 'concat', 'uglify']);  
-    //grunt.registerTask('development', ['jshint']);  
-    //grunt.registerTask('production', ['jshint', 'concat', 'uglify']);  
-    grunt.registerTask('production', ['uglify']);  
+    grunt.registerTask('default', ['jshint', 'uglify']); 
+    grunt.registerTask('development', ['jshint']);    
+    grunt.registerTask('production', ['jshint', 'uglify']);  
 };
