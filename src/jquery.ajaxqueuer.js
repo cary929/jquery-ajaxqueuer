@@ -142,6 +142,12 @@
 				return _this;
 			};
 
+			this.flush = function() {
+				_this.queue = [];
+
+				return _this;
+			};
+
 			return this;
 		}; 
 
