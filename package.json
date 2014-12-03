@@ -1,0 +1,33 @@
+{
+  "name": "jquery-ajaxqueuer",
+  "version": "0.1.0",
+  "description": "jQuery plugin for ajax queue",
+  "directories": {
+    "example": "examples",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pandao/jquery-ajaxqueuer.git"
+  },
+  "keywords": [
+    "jquery",
+    "ajax",
+    "ajaxqueue",
+    "ajaxqueuer"
+  ],
+  "author": "Pandao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pandao/jquery-ajaxqueuer/issues"
+  },
+  "homepage": "https://github.com/pandao/jquery-ajaxqueuer",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.6.0"
+  }
+}

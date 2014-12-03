@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Pandao" /> 
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<title>jQuery.ajaxQueuer Example in Require.js</title> 
+	</head>
+	<body>
+		<div class="buttons">
+			<h4>jQuery.ajaxQueuer Examples</h4>
+			<input type="button" value="同步队列" />
+			<input type="button" value="异步队列" /> 
+		</div>
+		<div id="debuger"></div> 
+		<script type="text/javascript" src="js/require.min.js"></script>
+		<script type="text/javascript">
+			require.config({
+		　　　　paths: {
+		　　　　　　"jquery": "js/jquery.min"
+		　　　　}
+		　　});
+
+		　　require(['../src/jquery.ajaxqueuer', './js/jquery.ajaxqueuer.demo'], function () {  
+				 
+			});
+		</script>
+	</body>
+</html>
