@@ -174,11 +174,7 @@
 			ajaxQueue.nowIndex = 0;
 			ajaxQueue.async();
 			//ajaxQueue.run();
-		});
-
-		$('[value="强制停止"]').click(function() { 
-			ajaxQueue.stop(); 
-		});
+		}); 
 
 	})(jQuery); 
 

@@ -178,10 +178,10 @@
 			var defaults = { 
 				before      : new Function,
 				beforeSend  : new Function,
+				cache       : true,
 				contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 				crossDomain : false,
-				complete    : new Function,
-				done        : false,
+				complete    : new Function, 
 				data        : {},
 				dataType    : "text html",
 				error       : new Function,
@@ -207,7 +207,7 @@
 				data        : queue.data,
 				type        : (typeof (queue.type) == "undefined")    ? _this.settings.type    : queue.type,
 				async       : async,
-				timeout     : (typeof (queue.timeout) == "undefined") ? _this.settings.timeout : queue.timeout, 
+				cache       : (queue.dataType == "jsonp" || queue.dataType == "script") ? false : queue.cache,
 				contentType : queue.contentType,
 				crossDomain : queue.crossDomain,
 				dataType    : queue.dataType,
@@ -215,6 +215,7 @@
 				jsonp       : queue.jsonp,
 				statusCode  : queue.statusCode,
 				processData : queue.processData,
+				timeout     : (typeof (queue.timeout) == "undefined") ? _this.settings.timeout : queue.timeout, 
 
 				beforeSend  : function(xhr) {
 					queue.beforeSend(xhr, queue, this);
