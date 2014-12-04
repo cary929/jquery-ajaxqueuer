@@ -52,6 +52,7 @@
 
 			queue   = queue   || [];
 			options = options || {};
+
 			var _this = this;
 
 			if (typeof (queue) == "object") {

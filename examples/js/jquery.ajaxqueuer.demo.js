@@ -159,6 +159,7 @@
 				$("#debuger")[0].innerHTML += "<p>getJSON => ajax.post.php =>" + data + "</p>";
 			}
 		});
+
 		//ajaxQueue.async();
 		//ajaxQueue.run();   
 		//ajaxQueue.stop();
